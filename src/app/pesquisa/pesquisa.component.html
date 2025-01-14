@@ -1,0 +1,15 @@
+<div class="search-form">
+    <h3>Filtrar por Tipos</h3>
+    <mat-checkbox [(ngModel)]="selectedCategories.gelado" (change)="onCategoryChange()">
+      Gelado
+    </mat-checkbox>
+    <mat-checkbox [(ngModel)]="selectedCategories.quente" (change)="onCategoryChange()">
+      Quente
+    </mat-checkbox>
+    <mat-checkbox [(ngModel)]="selectedCategories.mole" (change)="onCategoryChange()">
+      Mole
+    </mat-checkbox>
+    <mat-checkbox [(ngModel)]="selectedCategories.duro" (change)="onCategoryChange()">
+      Duro
+    </mat-checkbox>
+  </div>

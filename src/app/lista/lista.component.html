@@ -1,0 +1,75 @@
+<app-pesquisar (filter)="filterRecipes($event)"></app-pesquisar>
+
+<div class="container">
+    <!-- Botão "Adicionar Receita" -->
+    <button 
+      mat-fab 
+      color="primary" 
+      class="add-button" 
+      (click)="toggleForm()">
+      Adicionar Receita
+    </button>
+  
+    <!-- Lista de Receitas -->
+    <div class="recipe-list">
+      <mat-list>
+        <mat-list-item *ngFor="let recipe of paginatedRecipes; let i = index">
+          <div class="recipe-info">
+            <div class="recipe-text">
+              <p><strong>{{ recipe.name }}</strong></p>
+              <p>{{ recipe.ingredients }} Preço: R$ {{ recipe.price }} Tipos: {{ recipe.types.join(', ') }}</p>
+            </div>
+            <div class="recipe-actions">
+              <button mat-raised-button color="accent" (click)="editRecipe(i)">Editar</button>
+              <button mat-raised-button color="warn" (click)="deleteRecipe(i)">Apagar</button>
+            </div>
+          </div>
+        </mat-list-item>
+      </mat-list>
+    
+      <p *ngIf="filteredRecipes.length === 0">Nenhuma receita encontrada.</p>
+    
+      <mat-paginator #paginator [length]="filteredRecipes.length" 
+                     [pageSize]="itemsPerPage" 
+                     [pageSizeOptions]="[5]"
+                     (page)="pageChanged($event)">
+      </mat-paginator>
+    </div>
+
+    
+    <!-- Formulário de Adição da Receita -->
+    <div class="form-container" *ngIf="showForm">
+      <!-- Botão Fechar -->
+      <button mat-icon-button class="close-button" (click)="toggleForm()">
+        <mat-icon>close</mat-icon>
+      </button>
+      <h2>Adicionar</h2>
+      <form (ngSubmit)="addRecipe()">
+        <mat-form-field>
+          <input matInput placeholder="Nome" [(ngModel)]="formData.name" name="name" required />
+        </mat-form-field>
+  
+        <mat-form-field>
+          <textarea matInput placeholder="Ingredientes" [(ngModel)]="formData.ingredients" name="ingredients" required></textarea>
+        </mat-form-field>
+  
+        <mat-form-field>
+          <input matInput placeholder="Preço" [(ngModel)]="formData.price" name="price" type="number" required />
+        </mat-form-field>
+  
+        <div class="checkbox-group">
+          <h3>Selecione os Tipos</h3>
+          <div *ngFor="let type of recipeTypes">
+            <mat-checkbox 
+              [checked]="formData.types.includes(type)" 
+              (change)="onTypeChange(type, $event.checked)">
+              {{ type }}
+            </mat-checkbox>
+          </div>
+        </div>
+  
+        <button mat-raised-button color="primary" type="submit">Adicionar Receita</button>
+      </form>
+    </div>
+  </div>
+  
