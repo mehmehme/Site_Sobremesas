@@ -1,59 +1,56 @@
-# Sobremesas
+# 🍰 **Gerenciamento de Sobremesas** 🍨
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.7.
+![Sobremesas GIF](https://i.gifer.com/origin/8c/8c89dd5f533d4377dd28d195291c4188_w200.gif)
 
-## Development server
+Seja bem-vindo ao **Gerenciamento de Sobremesas**, um lugar doce onde você pode controlar e adicionar suas sobremesas favoritas com muito carinho! 😋
 
-To start a local development server, run:
+Este projeto foi gerado usando [Angular CLI](https://github.com/angular/angular-cli) versão 19.0.7.
+
+---
+
+## 💻 **Servidor de Desenvolvimento**
+
+Para iniciar o servidor local, execute o seguinte comando:
 
 ```bash
 ng serve
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🛠 Estrutura de Código
+O Angular CLI inclui ferramentas poderosas para scaffolding de código. Para gerar um novo componente, execute:
 
 ```bash
-ng generate component component-name
+ng generate component nome-do-componente
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para uma lista completa de esquemas disponíveis (como components, directives, ou pipes), execute:
 
 ```bash
 ng generate --help
 ```
-
-## Building
-
-To build the project run:
+🏗 Construindo o Projeto
+Para construir o projeto, basta executar:
 
 ```bash
 ng build
 ```
+Isso vai compilar seu projeto e armazenar os artefatos de build no diretório dist/. Por padrão, a build de produção otimiza sua aplicação para performance e velocidade.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+🧪 Executando Testes Unitários
+Para executar os testes unitários com o runner de testes Karma, use o comando abaixo:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+🔍 Executando Testes End-to-End (E2E)
+Para realizar os testes E2E, execute:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+O Angular CLI não inclui um framework de testes E2E por padrão. Você pode escolher o que mais se adequa às suas necessidades.
 
-## Additional Resources
+📚 Recursos Adicionais
+Para mais informações sobre como usar o Angular CLI, incluindo referências detalhadas de comandos, visite a página de Visão Geral do Angular CLI e Referência de Comandos.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+✨ Divirta-se gerenciando suas sobremesas deliciosas! 🍰🍩🍪
